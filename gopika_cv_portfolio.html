@@ -1,0 +1,257 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .port { max-width: 680px; padding: 0 0 3rem; }
+
+  .hero { padding: 2.5rem 0 2rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .hero-top { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+  .avatar { width: 56px; height: 56px; border-radius: 50%; background: #AFA9EC; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 500; color: #3C3489; flex-shrink: 0; }
+  .hero-name { font-size: 22px; font-weight: 500; color: var(--color-text-primary); }
+  .hero-role { font-size: 14px; color: var(--color-text-secondary); margin-top: 2px; }
+  .hero-bio { font-size: 15px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 1.25rem; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .contact-chip { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--color-text-secondary); background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: 20px; padding: 5px 12px; }
+  .contact-chip i { font-size: 14px; color: #534AB7; }
+
+  .section { padding: 1.75rem 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .section:last-child { border-bottom: none; }
+  .sec-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #534AB7; margin-bottom: 1rem; }
+
+  .edu-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-inst { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .edu-deg { font-size: 13px; color: var(--color-text-secondary); margin-top: 3px; }
+  .edu-gpa { font-size: 13px; font-weight: 500; color: #534AB7; white-space: nowrap; margin-left: 12px; }
+  .edu-yr { font-size: 12px; color: var(--color-text-tertiary); margin-top: 3px; text-align: right; }
+
+  .proj-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 0.75rem; cursor: pointer; transition: border-color 0.15s; }
+  .proj-card:hover { border-color: #AFA9EC; }
+  .proj-card:last-child { margin-bottom: 0; }
+  .proj-header { display: flex; justify-content: space-between; align-items: flex-start; }
+  .proj-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .proj-toggle { font-size: 13px; color: var(--color-text-tertiary); }
+  .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+  .tag { font-size: 11px; padding: 3px 9px; border-radius: 12px; font-weight: 500; }
+  .tag-purple { background: #EEEDFE; color: #3C3489; }
+  .tag-teal { background: #E1F5EE; color: #085041; }
+  .tag-blue { background: #E6F1FB; color: #0C447C; }
+  .proj-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-top: 10px; display: none; }
+  .proj-body.open { display: block; }
+
+  .cert-list { display: flex; flex-direction: column; gap: 10px; }
+  .cert-item { display: flex; align-items: center; gap: 12px; }
+  .cert-dot { width: 8px; height: 8px; border-radius: 50%; background: #AFA9EC; flex-shrink: 0; }
+  .cert-name { font-size: 14px; color: var(--color-text-primary); font-weight: 500; }
+  .cert-detail { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .cert-date { font-size: 12px; color: var(--color-text-tertiary); margin-left: auto; white-space: nowrap; }
+
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .skill-group { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.75rem 1rem; }
+  .skill-group-title { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: #534AB7; margin-bottom: 8px; }
+  .skill-item { font-size: 13px; color: var(--color-text-secondary); padding: 2px 0; }
+
+  .share-note { margin-top: 2rem; padding: 1rem 1.25rem; background: #EEEDFE; border-radius: var(--border-radius-lg); display: flex; align-items: center; gap: 10px; }
+  .share-note i { font-size: 20px; color: #534AB7; flex-shrink: 0; }
+  .share-note p { font-size: 13px; color: #3C3489; }
+</style>
+
+<div class="port">
+  <h2 class="sr-only">Gopika A — AI/ML Portfolio and CV</h2>
+
+  <div class="hero">
+    <div class="hero-top">
+      <div class="avatar">GA</div>
+      <div>
+        <div class="hero-name">Gopika A</div>
+        <div class="hero-role">M.Tech — Artificial Intelligence & Data Science · VIT Bhopal</div>
+      </div>
+    </div>
+    <p class="hero-bio">
+      AI/ML engineer with a background in deep learning, explainable AI, and scalable ML deployment. I build systems that are not only accurate — but interpretable and production-ready. Currently pursuing M.Tech (GPA 8.81) with hands-on experience across computer vision, cloud orchestration, and agentic AI.
+    </p>
+    <div class="contact-row">
+      <div class="contact-chip"><i class="ti ti-mail" aria-hidden="true"></i> gopikadharani1@gmail.com</div>
+      <div class="contact-chip"><i class="ti ti-phone" aria-hidden="true"></i> +91 7907029121</div>
+      <div class="contact-chip"><i class="ti ti-map-pin" aria-hidden="true"></i> India</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Education</div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-inst">Vellore Institute of Technology, Bhopal</div>
+        <div class="edu-deg">M.Tech in Artificial Intelligence & Data Science</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="edu-gpa">8.81 GPA</div>
+        <div class="edu-yr">2025 – Present</div>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div>
+        <div class="edu-inst">Federal Institute of Science and Technology</div>
+        <div class="edu-deg">B.Tech in Electronics & Communication · Minor in CS Engineering</div>
+      </div>
+      <div style="text-align:right;">
+        <div class="edu-gpa">8.13 CGPA</div>
+        <div class="edu-yr">2020 – 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Projects <span style="font-size:11px; color: var(--color-text-tertiary); font-weight:400; letter-spacing:0; text-transform:none;">— tap to expand</span></div>
+
+    <div class="proj-card" onclick="toggleProj(this)">
+      <div class="proj-header">
+        <div class="proj-title">Multitasking AI Image Restoration</div>
+        <i class="ti ti-chevron-down proj-toggle" aria-hidden="true"></i>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-purple">U-Net</span>
+        <span class="tag tag-purple">DeOldify</span>
+        <span class="tag tag-teal">Super-Resolution</span>
+        <span class="tag tag-blue">Computer Vision</span>
+      </div>
+      <div class="proj-body">
+        Designed a lightweight modular artifact image restoration pipeline combining inpainting (U-Net), colorization (DeOldify), and super-resolution (SRNet-inspired) into a single end-to-end system. Achieved significant improvements in PSNR and SSIM metrics on degraded image datasets.
+      </div>
+    </div>
+
+    <div class="proj-card" onclick="toggleProj(this)">
+      <div class="proj-header">
+        <div class="proj-title">Explainable AI Sleep Health Assessment</div>
+        <i class="ti ti-chevron-down proj-toggle" aria-hidden="true"></i>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-purple">SHAP</span>
+        <span class="tag tag-teal">Explainable AI</span>
+        <span class="tag tag-blue">PubMed Retrieval</span>
+      </div>
+      <div class="proj-body">
+        Built an XAI framework for sleep condition prediction with emphasis on model interpretability for clinical use. Integrated SHAP-based feature attribution, semantic retrieval from PubMed literature, and a real-time interactive chatbot-style explanation interface — making AI decisions transparent to non-technical clinicians.
+      </div>
+    </div>
+
+    <div class="proj-card" onclick="toggleProj(this)">
+      <div class="proj-header">
+        <div class="proj-title">Scalable AI Workload Orchestration System</div>
+        <i class="ti ti-chevron-down proj-toggle" aria-hidden="true"></i>
+      </div>
+      <div class="proj-tags">
+        <span class="tag tag-teal">Kubernetes</span>
+        <span class="tag tag-teal">AWS EKS</span>
+        <span class="tag tag-purple">FastAPI</span>
+        <span class="tag tag-blue">Docker</span>
+      </div>
+      <div class="proj-body">
+        Built and deployed a full end-to-end ML inference platform using FastAPI, containerized with Docker, and orchestrated via Kubernetes. Deployed on AWS EKS with internet-accessible LoadBalancer, Horizontal Pod Autoscaling (HPA), and managed the full deployment lifecycle from local Minikube to cloud production.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Experience & Certifications</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <div class="cert-dot"></div>
+        <div>
+          <div class="cert-name">ServiceNow Virtual Internship</div>
+          <div class="cert-detail">Agentic AI · Flow Automation · ServiceNow Administration · CSA Certification</div>
+        </div>
+        <div class="cert-date">May 2026</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-dot"></div>
+        <div>
+          <div class="cert-name">Oracle Cloud Infrastructure 2025</div>
+          <div class="cert-detail">Data Science & Generative AI Certification</div>
+        </div>
+        <div class="cert-date">Oct 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-dot"></div>
+        <div>
+          <div class="cert-name">Keltron — Kerala State Electronics Development Corporation</div>
+          <div class="cert-detail">Embedded Systems Internship</div>
+        </div>
+        <div class="cert-date">Jan 2023</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-dot"></div>
+        <div>
+          <div class="cert-name">NeST Technologies</div>
+          <div class="cert-detail">Embedded Systems & Microprocessors Internship</div>
+        </div>
+        <div class="cert-date">Mar 2022</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-label">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">C++</div>
+        <div class="skill-item">MySQL</div>
+        <div class="skill-item">Embedded C</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">ML / AI</div>
+        <div class="skill-item">TensorFlow</div>
+        <div class="skill-item">PyTorch</div>
+        <div class="skill-item">SHAP / XAI</div>
+        <div class="skill-item">GenAI</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Infrastructure</div>
+        <div class="skill-item">Kubernetes</div>
+        <div class="skill-item">Docker</div>
+        <div class="skill-item">AWS / EKS</div>
+        <div class="skill-item">FastAPI</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data & BI</div>
+        <div class="skill-item">Tableau</div>
+        <div class="skill-item">Matplotlib</div>
+        <div class="skill-item">Microsoft Excel</div>
+        <div class="skill-item">EDA</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Core Skills</div>
+        <div class="skill-item">Feature Engineering</div>
+        <div class="skill-item">Model Evaluation</div>
+        <div class="skill-item">Data Structures</div>
+        <div class="skill-item">OOP</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Tools</div>
+        <div class="skill-item">GitHub</div>
+        <div class="skill-item">VS Code</div>
+        <div class="skill-item">ServiceNow</div>
+        <div class="skill-item">Oracle Cloud</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="share-note">
+    <i class="ti ti-send" aria-hidden="true"></i>
+    <p>This portfolio is based on your resume and SOP. You can also ask me to generate a shareable HTML file or a tailored version for a specific role or company.</p>
+  </div>
+</div>
+
+<script>
+function toggleProj(card) {
+  const body = card.querySelector('.proj-body');
+  const icon = card.querySelector('.proj-toggle');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+  icon.style.transition = 'transform 0.2s';
+  card.style.borderColor = isOpen ? '' : '#AFA9EC';
+}
+</script>
